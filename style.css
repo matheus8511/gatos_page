@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container_logo {
+    display: flex;
+    flex-flow: nowrap:
+    
+    width: 100%;
+    border-bottom: 5px solid black;
+    justify-content: center;
+
+}
+
+header  img {
+    width: 400px;
+    height: 400px;
+
+}
