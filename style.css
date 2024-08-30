@@ -5,17 +5,27 @@
 }
 
 .container_logo {
+    margin-top: 100px;
+    margin-bottom: 100px;
     display: flex;
-    flex-flow: nowrap:
+    flex-flow: nowrap;
     
     width: 100%;
-    border-bottom: 5px solid black;
+    
     justify-content: center;
 
 }
+header {
+    background-color: #F2C9BB;
+}
 
 header  img {
-    width: 400px;
-    height: 400px;
+    
+    width: 500px;
+    height: 500px;
 
+}
+
+body {
+    background-color: #F2ADA7;
 }
