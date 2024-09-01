@@ -4,6 +4,28 @@
     box-sizing: border-box;
 }
 
+/* Color Theme Swatches in Hex */
+$Pink-Boy-1-hex: #F294A5;
+$Pink-Boy-2-hex: #F2ADA7;
+$Pink-Boy-3-hex: #F2F2F2;
+$Pink-Boy-4-hex: #595959;
+$Pink-Boy-5-hex: #0D0D0D;
+
+/* Color Theme Swatches in RGBA */
+$Pink-Boy-1-rgba: rgba(242,147,165, 1);
+$Pink-Boy-2-rgba: rgba(242,173,167, 1);
+$Pink-Boy-3-rgba: rgba(242,242,242, 1);
+$Pink-Boy-4-rgba: rgba(89,89,89, 1);
+$Pink-Boy-5-rgba: rgba(12,12,12, 1);
+
+/* Color Theme Swatches in HSLA */
+$Pink-Boy-1-hsla: hsla(348, 78, 76, 1);
+$Pink-Boy-2-hsla: hsla(5, 74, 80, 1);
+$Pink-Boy-3-hsla: hsla(0, 0, 95, 1);
+$Pink-Boy-4-hsla: hsla(0, 0, 35, 1);
+$Pink-Boy-5-hsla: hsla(0, 0, 5, 1);
+
+
 .container_logo {
     margin-top: 100px;
     margin-bottom: 100px;
