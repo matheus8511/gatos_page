@@ -4,14 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Cat+</title>
+    <title>Culinaria+</title>
 </head>
 <body>
-    <header class="container_logo">
-        
-        <img src="/imagens/Culinaria+.png" alt="logo_gatos">
+   <div class="container">
+       <header>
+           <img src="/imagens/Culinaria+.png" alt="logo_gatos">
+       </header>
+       
+       <nav class="menu">
+           <li><a href="#produtos">PRODUTOS</a></li>
+           <li><a href="#home">HOME</a></li>
+           <li><a href="#navegue">NAVEGUE</a></li>
+           <li><a href="#colecoes">COLEÇÕES</a></li>
+           <li><a href="#contato">CONTATO</a></li>
+       </nav>
 
-    </header>
+       <div id="busca">
+           <form action="/search" class="search" method="get">
+               <input id="txtbusca" name="q" type="text" value="" placeholder="Digite o que você procura" />
+               <input id="btnBusca" type="submit" value="Ok"/>
+           </form>
+
+           <div class="social-icons">
+               <a href="https://www.instagram.com/seuPerfil" target="_blank">
+                   <img src="/imagens/icons8-instagram.svg" alt="Instagram">
+               </a>
+               <a href="https://www.twitter.com/seuPerfil" target="_blank">
+                   <img src="/imagens/icons8-twitter.svg" alt="Twitter">
+               </a>
+               <a href="https://api.whatsapp.com/send?phone=seuNumero" target="_blank">
+                   <img src="/imagens/icons8-whatsapp.svg" alt="WhatsApp">
+               </a>
+               <a href="https://youtube.com/matheus8511" target="_blank">
+                   <img src="/imagens/icons8-youtube.svg" alt="youtube">
+               </a>
+           </div>      
+       </div>    
+
+       <div class="apresentacao">
+           <h1>Receitas ao Estilo Retro</h1>
+       </div>
     
+    <div class="slideshow-container">
+        <input type="radio" name="r" id="radio1" checked>
+        <input type="radio" name="r" id="radio2">
+        <input type="radio" name="r" id="radio3">
+    
+        <div class="slide first">
+            <img src="/imagens/composicao-de-comida-brasileira-deliciosa-de-alto-angulo.jpg" alt="Slide 1">
+        </div>
+        <div class="slide second">
+            <img src="/imagens/posta-de-peixe-com-batatas-fritas-kiwi-alface-cenoura-tomate-e-repolho-em-um-prato-branco.jpg" alt="Slide 2">
+        </div>
+        <div class="slide third">
+            <img src="/imagens/frango.jpg" alt="Slide 3">
+        </div>
+    
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+    </div>
+    
+    <div class="postagens">
+        <section class="postagem">
+            <img src="/imagens/hotpork_hotdog-de-porco-Copia.jpg" alt="Hot Pork">
+            <div class="conteudo-postagem">
+                <h1>#HotPork</h1>
+                <p>O Hot Pork é o mais novo porco quente da cidade e fez tanto sucesso aqui na Casa do Porco que ganhou um lugar só para ele! Feito de salsicha 100% porco caipira + pão de leite + ketchup de tomate com maçã + maionese de limão + mostarda fermentada com tucupi. Todos os ingredientes são feitos na casa artesanalmente, sem conservantes ou aditivos químicos. Também disponível na versão vegetariana com salsicha à base de tofu e cogumelos.</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="postagens">
+        <section class="postagem">
+            <img src="/imagens/sorveteria-do-centro_sorvete_de_bacon-Copia.jpg" alt="Sorvete de Bacon">
+            <div class="conteudo-postagem">
+                <h1>#SorveteriaDoCentro</h1>
+                <p>Anexo ao Hot Pork está a Sorveteria do Centro. Sonho de infância dos chefs Janaína e Jefferson Rueda, os sorvetes são vendidos na máquina de soft da forma mais fresca possível, e podem ser simples, sobremesa ou alcóolicos. Assim como seu irmão, os sorvetes são feitos com produtos naturais e sem conservantes, e o cardápio muda de acordo com a sazonalidade dos ingredientes</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="postagens">
+        <section class="postagem">
+            <img src="/imagens/Virado-a-Paulista-05.jpg" alt="Sorvete de Bacon">
+            <div class="conteudo-postagem">
+                <h1>#MerendadaCidade
+                </h1>
+                <p>Virado à Paulista, Bife à rolê, Feijoada, Massa Caseira com Frango, Peixada. Os pratos comerciais que comemos todos os dias, agora disponíveis para venda. Este é o conceito do Merenda da Cidade, novo restaurante dos chefs Janaína Torres Rueda e Jefferson Rueda. Preparados com ingredientes como verduras e legumes do Sítio Rueda, frango orgânico, massa caseira feita no Bar da Dona Onça e porco caipira de criação própria (o mesmo que servimos na A Casa do Porco), as refeições vêm com suco natural e sobremesa. Além do menu que varia a cada dia, há o Arroz da Terra (vegano), servido diariamente, e Sanduíches (Milanesa de Porco, Porco Assado, Presunto Real e Mortadela Porco Real). Todos os pratos estão disponíveis no delivery pelo 99679-9315. Aceita ticket (VR, Sodexo, Ticket, Alelo).</p>
+            </div>
+        </section>
+    </div>
+
+
+    
+   
+
+   <!-- Footer -->
+   <footer>
+       <p>&copy; 2024 Culinaria+. Todos os direitos reservados.</p>
+       <div class="footer-links">
+           <a href="#">Política de Privacidade</a> | 
+           <a href="#">Termos de Uso</a>
+       </div>
+   </footer>
+   </div>
 </body>
 </html>

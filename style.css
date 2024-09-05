@@ -1,53 +1,299 @@
+@charset "UTF-8";
+
+:root {
+    --cor-base: #F2C9BB;
+    --cor-destaque: #D58B72;
+    --cor-neutra: #EFEFEF;
+    --cor-acento: #8C5A54;
+}
+
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* Color Theme Swatches in Hex */
-$Pink-Boy-1-hex: #F294A5;
-$Pink-Boy-2-hex: #F2ADA7;
-$Pink-Boy-3-hex: #F2F2F2;
-$Pink-Boy-4-hex: #595959;
-$Pink-Boy-5-hex: #0D0D0D;
-
-/* Color Theme Swatches in RGBA */
-$Pink-Boy-1-rgba: rgba(242,147,165, 1);
-$Pink-Boy-2-rgba: rgba(242,173,167, 1);
-$Pink-Boy-3-rgba: rgba(242,242,242, 1);
-$Pink-Boy-4-rgba: rgba(89,89,89, 1);
-$Pink-Boy-5-rgba: rgba(12,12,12, 1);
-
-/* Color Theme Swatches in HSLA */
-$Pink-Boy-1-hsla: hsla(348, 78, 76, 1);
-$Pink-Boy-2-hsla: hsla(5, 74, 80, 1);
-$Pink-Boy-3-hsla: hsla(0, 0, 95, 1);
-$Pink-Boy-4-hsla: hsla(0, 0, 35, 1);
-$Pink-Boy-5-hsla: hsla(0, 0, 5, 1);
-
-
-.container_logo {
-    margin-top: 100px;
-    margin-bottom: 100px;
+.container {
     display: flex;
-    flex-flow: nowrap;
-    
+    flex-flow: column nowrap;
     width: 100%;
-    
-    justify-content: center;
-
 }
+
 header {
-    background-color: #F2C9BB;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    background: var(--cor-base);
 }
 
-header  img {
-    
-    width: 500px;
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 2px -2px gray;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--cor-acento);
+}
+
+.menu li a:hover {
+    color: var(--cor-destaque);
+    transition: color 0.3s ease;
+}
+
+#busca {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 21px auto 15px;
+    padding: 0;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+#txtbusca {
+    border: 0;
+    background: var(--cor-neutra);
+    width: 200px;
+    height: 32px;
+    padding: 5px;
+}
+
+#btnBusca {
+    background: var(--cor-destaque);
+    color: #FFF;
+    padding: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#btnBusca:hover {
+    background: #99cccc;
+}
+
+.social-icons {
+    display: flex;
+    margin-left: 22px;
+    justify-content: center;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+}
+
+.apresentacao {
     height: 500px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/imagens/B_maonamassa_portaovos_2048x.webp');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: var(--cor-acento);
+    font-size: 3rem;
 }
 
-body {
-    background-color: #F2ADA7;
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 30px auto;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 600px;
+    animation: fade 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#radio1:checked ~ .first {
+    display: block;
+}
+
+#radio2:checked ~ .second {
+    display: block;
+}
+
+#radio3:checked ~ .third {
+    display: block;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 5px solid var(--cor-base);
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.manual-btn:hover {
+    background-color: var(--cor-destaque);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Sidebar de receitas populares */
+.sidebar {
+    background-color: var(--cor-neutra);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebar h3 {
+    color: var(--cor-acento);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--cor-destaque);
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilização do Footer */
+footer {
+    background-color: var(--cor-base);
+    color: var(--cor-acento);
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-links a {
+    color: var(--cor-acento);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .postagem img {
+        width: 100%;
+    }
+
+    .social-icons img {
+        width: 40px;
+        height: 40px;
+    }
+}
+.postagens {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--cor-neutra);
+    width: 70%;
+    margin: 30px auto;
+    gap: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.postagem {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.postagem img {
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Garante que a imagem se ajuste sem distorção */
+}
+
+.conteudo-postagem {
+    max-width: 600px;
+}
+
+.conteudo-postagem h1 {
+    font-size: 2rem;
+    color: var(--cor-acento);
+    margin-bottom: 10px;
+    text-align: left; /* Centralize se necessário */
+}
+
+.conteudo-postagem p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--cor-acento);
+    text-align: justify; /* Melhor leitura para textos longos */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .postagens {
+        flex-direction: column; /* Empilhar verticalmente em telas pequenas */
+        width: 90%;
+    }
+
+    .postagem {
+        flex-direction: column; /* Empilhar imagem e texto verticalmente */
+        gap: 10px;
+    }
+
+    .postagem img {
+        width: 100%; /* Garantir que a imagem ocupe toda a largura em telas pequenas */
+    }
 }
