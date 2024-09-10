@@ -13,6 +13,28 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-acento);
+
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
 .container {
     display: flex;
     flex-flow: column nowrap;
@@ -24,6 +46,8 @@ header {
     display: flex;
     justify-content: center;
     background: var(--cor-base);
+    
+
 }
 
 .menu {
@@ -40,6 +64,8 @@ header {
     box-shadow: 0px 4px 2px -2px gray;
 }
 
+
+
 .menu li {
     margin: 0 15px;
 }
@@ -47,12 +73,16 @@ header {
 .menu li a {
     text-decoration: none;
     color: var(--cor-acento);
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .menu li a:hover {
-    color: var(--cor-destaque);
-    transition: color 0.3s ease;
+    color: #FFF;
+    background-color: var(--cor-destaque);
+    border-radius: 5px;
+    padding: 5px 10px;
 }
+
 
 #busca {
     display: flex;
@@ -68,12 +98,14 @@ header {
 }
 
 #txtbusca {
-    border: 0;
+    border: 1px solid var(--cor-acento);
+    border-radius: 20px;
     background: var(--cor-neutra);
     width: 200px;
     height: 32px;
-    padding: 5px;
+    padding: 5px 15px;
 }
+
 
 #btnBusca {
     background: var(--cor-destaque);
@@ -90,6 +122,8 @@ header {
 }
 
 .social-icons {
+    
+    
     display: flex;
     margin-left: 22px;
     justify-content: center;
@@ -116,11 +150,46 @@ header {
     font-size: 3rem;
 }
 
+
+.apresentacao {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/imagens/B_maonamassa_portaovos_2048x.webp');
+}
+
+.apresentacao {
+    filter: brightness(0.7);
+}
+
+
+.apresentacao h1 {
+    font-size: 4rem;
+    color: #FFF; /* Mudança para branco */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para destacar o texto */
+    font-weight: bold;
+    letter-spacing: 2px; /* Espaçamento entre as letras para dar mais estilo */
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Vem de baixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Fica na posição original */
+    }
+}
+
+
+
 .slideshow-container {
     position: relative;
     max-width: 100%;
     margin: 30px auto;
 }
+
+
 
 .slide {
     display: none;
@@ -203,16 +272,21 @@ footer {
     padding: 20px;
     text-align: center;
     margin-top: 50px;
+    border-top: 1px solid var(--cor-acento);
 }
 
 .footer-links a {
     color: var(--cor-acento);
     text-decoration: none;
     margin: 0 10px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .footer-links a:hover {
-    text-decoration: underline;
+    background-color: var(--cor-destaque);
+    color: #FFF;
 }
 
 @keyframes fade {
@@ -226,7 +300,8 @@ footer {
 
 @media (max-width: 768px) {
     .menu {
-        flex-direction: column;
+        flex-flow: nowrap row;
+        
     }
 
     .postagem img {
@@ -247,6 +322,9 @@ footer {
     width: 70%;
     margin: 30px auto;
     gap: 20px; /* Espaço entre a imagem e o texto */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    overflow: hidden;
 }
 
 .postagem {
@@ -297,3 +375,46 @@ footer {
         width: 100%; /* Garantir que a imagem ocupe toda a largura em telas pequenas */
     }
 }
+
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Aumenta levemente o ícone ao passar o mouse */
+}
+
+#btnBusca {
+    background: var(--cor-destaque);
+    color: #FFF;
+    padding: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px; /* Borda arredondada */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.slide {
+    animation: slide 1s ease-in-out;
+}
+
+
